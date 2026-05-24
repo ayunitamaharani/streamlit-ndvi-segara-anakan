@@ -1,3 +1,4 @@
+import streamlit as st
 import os
 import gdown
 
@@ -13,8 +14,6 @@ if not os.path.exists(TIF_PATH):
             TIF_PATH,
             quiet=False
         )
-        
-import streamlit as st
 import rasterio
 import numpy as np
 import pandas as pd
