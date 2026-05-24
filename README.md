@@ -2,7 +2,7 @@
 
 Interactive dashboard for analyzing vegetation density and spatial autocorrelation in the Segara Anakan coastal area, Cilacap Regency, using Sentinel-2 satellite imagery (2025).
 
-## 🚀 Live Demo
+## Live Demo
 [app-ndvi-segara-anakan.streamlit.app](https://app-ndvi-segara-anakan.streamlit.app)
 
 ---
