@@ -8,12 +8,11 @@ GDRIVE_ID = "1kCkC3ggGtibRiL_Fcd9JfD2ZjF9vlqgg"
 
 if not os.path.exists(TIF_PATH):
     os.makedirs("data", exist_ok=True)
-    with st.spinner("Mengunduh data raster NDVI..."):
-        gdown.download(
-            f"https://drive.google.com/uc?id={GDRIVE_ID}",
-            TIF_PATH,
-            quiet=False
-        )
+    gdown.download(
+        f"https://drive.google.com/uc?id={GDRIVE_ID}",
+        TIF_PATH,
+        quiet=False
+    )
 import rasterio
 import numpy as np
 import pandas as pd
@@ -391,8 +390,14 @@ with tab1:
     st.caption("Resolusi spasial 10m. Warna hijau menunjukkan vegetasi lebat, warna merah menunjukkan vegetasi rendah atau non-vegetasi.")
 
     with rasterio.open("data/NDVI_Sentinel2_2025_Float.tif") as src:
-        ndvi_raster = src.read(1).astype(float)
-        nodata = src.nodata
+
+        data = src.read(
+        1,
+        out_shape=(1, src.height // 4, src.width // 4),
+        resampling=rasterio.enums.Resampling.average
+    )
+    ndvi_raster = data.astype(float)
+    nodata = src.nodata
     if nodata is not None:
         ndvi_raster[ndvi_raster == nodata] = np.nan
 
