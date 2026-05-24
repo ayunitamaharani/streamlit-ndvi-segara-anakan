@@ -1,3 +1,19 @@
+import os
+import gdown
+
+# AUTO-DOWNLOAD FILE TIF DARI GOOGLE DRIVE
+TIF_PATH = "data/NDVI_Sentinel2_2025_Float.tif"
+GDRIVE_ID = "1kCkC3ggGtibRiL_Fcd9JfD2ZjF9vlqgg"
+
+if not os.path.exists(TIF_PATH):
+    os.makedirs("data", exist_ok=True)
+    with st.spinner("Mengunduh data raster NDVI..."):
+        gdown.download(
+            f"https://drive.google.com/uc?id={GDRIVE_ID}",
+            TIF_PATH,
+            quiet=False
+        )
+        
 import streamlit as st
 import rasterio
 import numpy as np
