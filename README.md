@@ -9,7 +9,7 @@ Dashboard interaktif untuk menganalisis kerapatan vegetasi dan autokorelasi spas
 
 ## Overview
 
-Segara Anakan merupakan ekosistem lahan basah pesisir yang dinamis, dicirikan oleh hutan mangrove, tambak budidaya, lahan pertanian, dan kawasan terbangun. Sedimentasi yang cepat, pengaruh pasang surut, serta aktivitas manusia mendorong perubahan tutupan vegetasi secara terus-menerus — sehingga pemantauan yang berkala dan akurat menjadi hal yang esensial dalam pengelolaan pesisir berkelanjutan.
+Segara Anakan merupakan ekosistem lahan basah pesisir yang dinamis, dicirikan oleh hutan mangrove, tambak budidaya, lahan pertanian, dan kawasan terbangun. Sedimentasi yang cepat, pengaruh pasang surut, serta aktivitas manusia mendorong perubahan tutupan vegetasi secara terus-menerus sehingga pemantauan yang berkala dan akurat menjadi hal yang esensial dalam pengelolaan pesisir berkelanjutan.
 
 Dashboard ini memproses data Sentinel-2 (resolusi spasial 10m, revisit 5 hari) yang diperoleh melalui Google Earth Engine (GEE) untuk menghitung nilai NDVI di seluruh wilayah kajian, kemudian menerapkan metode statistik spasial untuk mendeteksi pola pengelompokan vegetasi.
 
