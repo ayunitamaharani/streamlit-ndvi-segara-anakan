@@ -2,7 +2,6 @@ import streamlit as st
 import os
 import gdown
 
-# AUTO-DOWNLOAD FILE TIF DARI GOOGLE DRIVE
 TIF_PATH = "data/NDVI_Sentinel2_2025_Float.tif"
 GDRIVE_ID = "1kCkC3ggGtibRiL_Fcd9JfD2ZjF9vlqgg"
 
@@ -30,7 +29,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# CSS — Minimalist UI · Pale Sage Green Theme
+# CSS
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap');
